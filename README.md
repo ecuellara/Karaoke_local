@@ -5,7 +5,7 @@
 <body>
 <h1>Karaoke Local App</h1>
 
-<p><img src="screenshot.png" alt="Karaoke App Screenshot"></p>
+<p><img src="/static/media/Karaoke_app.png" alt="Karaoke App Screenshot"></p>
 
 <p>Una aplicación de karaoke local para fiestas y reuniones, con gestión de turnos y visualización de letras.</p>
 
