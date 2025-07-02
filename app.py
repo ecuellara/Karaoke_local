@@ -153,7 +153,7 @@ def ver_cola():
     return jsonify(load_turnos())
 
 # 📖 Obtener la letra de una canción
-GENIUS_TOKEN = "2R5N6rgpeXewlYUfky0DbN-ZS6tshSl1x6xMcglBjSbh38IjlXFLHZ8h_nIc3hDg"
+GENIUS_TOKEN = "ingresa-tu-token-aqui"
 genius = lyricsgenius.Genius(GENIUS_TOKEN)
 
 @app.route("/lyrics")
