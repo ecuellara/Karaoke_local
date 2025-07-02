@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karaoke App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><i class="fas fa-microphone-alt"></i> Karaoke Local</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="main-grid">
+      <!-- Columna izquierda -->
+      <div>
+        <!-- Buscador -->
+        <div class="card">
+          <h2><i class="fas fa-search"></i> Buscar canciones</h2>
+          <input type="text" id="searchInput" placeholder="Buscar por nombre, artista, álbum o género">
+          <h3>Resultados:</h3>
+          <ul id="results" class="scroll-container"></ul>
+        </div>
+        
+        <!-- Todas las canciones -->
+        <div class="card">
+          <h2><i class="fas fa-music"></i> Biblioteca de canciones</h2>
+          <div id="allSongs" class="scroll-container"></div>
+        </div>
+        
+        <!-- Agregar a la cola -->
+        <div class="card">
+          <h2><i class="fas fa-plus-circle"></i> Agregar a la cola</h2>
+          <form id="turnoForm">
+            <input type="text" id="usuarioInput" placeholder="Tu nombre" required>
+            <select id="cancionSelect" required>
+              <option value="" disabled selected>Selecciona una canción</option>
+            </select>
+            <button type="submit"><i class="fas fa-plus"></i> Agregar</button>
+          </form>
+          <p id="turnoStatus"></p>
+        </div>
+      </div>
+      
+      <!-- Columna derecha -->
+      <div>
+        <!-- Reproductor -->
+        <div id="playerContainer" class="card">
+          <h2><i class="fas fa-play"></i> Reproductor</h2>
+          <audio id="player" controls></audio>
+        </div>
+        
+        <!-- Cola de turnos -->
+        <div class="card">
+          <h2><i class="fas fa-list-ol"></i> Cola de turnos</h2>
+          <ul id="colaTurnos" class="scroll-container">
+            <li>No hay turnos en espera.</li>
+          </ul>
+        </div>
+        
+        <!-- Popup para letras -->
+        <div id="lyricsPopup" class="lyrics-popup">
+          <div class="popup-content">
+            <div class="popup-header">
+              <h3 id="popupSongTitle">Título de la Canción</h3>
+              <button id="closePopup" class="close-btn">&times;</button>
+            </div>
+            <div class="popup-body">
+              <pre id="popupLyrics">Letra de la canción...</pre>
+            </div>
+          </div>
+        </div>  
+
+        <!-- Letras -->
+        <div id="lyricsContainer" class="card">
+          <h2><i class="fas fa-scroll"></i> Letra de la canción</h2>
+          <pre id="lyrics">Selecciona una canción para ver la letra.</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  
+</body>
+</html>
