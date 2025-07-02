@@ -15,7 +15,6 @@
 <li>🎤 Sistema de turnos para múltiples participantes</li>
 <li>🔍 Búsqueda de canciones por nombre, artista, álbum o género</li>
 <li>📜 Visualización de letras sincronizadas</li>
-<li>⬆️ Subida de nuevas canciones</li>
 <li>🌐 Funciona en red local (un host y múltiples clientes)</li>
 </ul>
 
