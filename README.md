@@ -96,8 +96,8 @@ cd karaoke-local
 
 <p>Las contribuciones son bienvenidas. Por favor, abre un issue o pull request para sugerencias o mejoras.</p>
 
-<h2>Licencia</h2>
+<h2><span class="emoji">📜</span> Licencia</h2>
 
-<p>MIT</p>
+<p>Distribuido bajo la licencia MIT. Consulta el archivo <code>LICENSE</code> para más información.</p>
 </body>
 </html>
